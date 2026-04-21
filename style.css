@@ -1,0 +1,137 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: #CE2029; /* Fire Engine Red */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+}
+
+header h1, footer h2 {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.logo {
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+/* Split Screen Layout */
+.split-screen {
+    display: flex;
+    min-height: calc(100vh - 150px);
+}
+
+.left-side {
+    flex: 1;
+    background-image: url('courthouse.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps it still while scrolling */
+    display: block;
+}
+
+.right-side {
+    flex: 1;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.content-padding {
+    padding: 40px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Accordion (Using HTML5 Details/Summary) */
+.accordion {
+    width: 100%;
+}
+
+details {
+    border: 2px solid #CE2029;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+summary {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f9f9f9;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+summary::after {
+    content: '▼';
+    color: #CE2029;
+}
+
+details[open] summary {
+    border-bottom: 2px solid #CE2029;
+    background: #eee;
+}
+
+details[open] summary::after {
+    content: '▲';
+}
+
+.details-content {
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* Reviews */
+.review {
+    margin-bottom: 15px;
+}
+
+.review strong {
+    color: #CE2029;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Floating Call Button */
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Green for "Call" action */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+    }
+    .left-side {
+        height: 200px;
+        background-attachment: scroll; /* Fixed doesn't work well on mobile */
+    }
+}
