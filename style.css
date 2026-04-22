@@ -36,7 +36,15 @@ header h1, footer h2 {
     letter-spacing: 1px;
 }
 
-/* Background */
+/* NEW: Style for the Location */
+.location-text {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 .background-fixed {
     position: fixed;
     top: 0;
@@ -50,7 +58,6 @@ header h1, footer h2 {
     z-index: -1;
 }
 
-/* Page Centering */
 .page-layout {
     display: flex;
     justify-content: center;
@@ -73,7 +80,6 @@ header h1, footer h2 {
     margin-bottom: 30px;
 }
 
-/* Accordion Boxes */
 details {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -100,9 +106,8 @@ summary {
     border-radius: 0 0 8px 8px;
 }
 
-/* BUTTON CENTERING & STYLE */
 .cta-container {
-    text-align: center; /* Centers the button inside the column */
+    text-align: center;
     margin-top: 25px;
 }
 
@@ -116,12 +121,11 @@ summary {
     font-weight: bold;
     font-size: 1.2rem;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
-    transition: transform 0.2s ease, background-color 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .call-bubble:hover {
     transform: scale(1.05);
-    background-color: #1eb954;
 }
 
 .review {
