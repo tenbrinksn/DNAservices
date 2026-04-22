@@ -8,8 +8,8 @@ body, html {
 header {
     background-color: #D32F2F;
     color: white;
-    padding: 20px 0;
-    position: relative; /* Essential for positioning the button */
+    padding: 25px 0;
+    position: relative;
     z-index: 100;
 }
 
@@ -20,24 +20,24 @@ footer {
     text-align: center;
 }
 
-/* Header Button Styling */
-.header-call-btn {
+/* THE GREEN BUBBLE */
+.call-bubble {
     position: absolute;
-    top: 50%;
+    top: 20px; /* Aligned with the top right */
     right: 30px;
-    transform: translateY(-50%); /* Perfectly centers it vertically in the bar */
-    background-color: #25D366; /* Green */
+    background-color: #25D366; /* Vibrant Green */
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 30px; /* Makes it a "bubble" or pill shape */
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-    transition: background 0.3s;
+    font-size: 1rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
 }
 
-.header-call-btn:hover {
+.call-bubble:hover {
+    transform: scale(1.05); /* Slight pop on hover */
     background-color: #1eb954;
 }
 
@@ -79,7 +79,7 @@ header h1, footer h2 {
     z-index: -1;
 }
 
-/* Content Centering */
+/* Centering Logic */
 .page-layout {
     display: flex;
     flex-direction: column;
@@ -103,10 +103,10 @@ header h1, footer h2 {
     margin-bottom: 30px;
 }
 
-/* Transparent Boxes */
+/* Accordion Box Design */
 details {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     border: 2px solid #D32F2F;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -137,13 +137,11 @@ summary {
 
 .review strong { color: #D32F2F; }
 
-/* Mobile Adjustments */
+/* Mobile View */
 @media (max-width: 768px) {
-    .header-call-btn {
-        position: static; /* Moves button below text on small phones */
+    .call-bubble {
+        position: static;
         display: inline-block;
         margin-top: 15px;
-        transform: none;
     }
-    .brand-icon { height: 50px; }
 }
