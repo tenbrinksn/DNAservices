@@ -7,17 +7,17 @@ body, html {
 
 /* Red Bar Containers */
 header, footer {
-    background-color: #D32F2F; /* Fire Engine Red */
+    background-color: #D32F2F;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
     position: relative;
     z-index: 100;
 }
 
-/* LOGO SIZE CONTROL */
+/* FIXED LOGO SIZE */
 .brand-icon {
-    height: 65px; /* Locked height so it stays small on Computer and Mobile */
+    height: 65px; /* Keeps the logo small on all screens */
     width: auto;
     margin-bottom: 10px;
     display: block;
@@ -52,18 +52,22 @@ header h1, footer h2 {
     z-index: -1;
 }
 
-/* CENTERING THE BOXES */
+/* TOTAL CENTERING LOGIC */
 .page-layout {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    min-height: 60vh;
-    padding: 60px 20px;
+    flex-direction: column; /* Stacks text and boxes */
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    min-height: 70vh;        /* Ensures it takes up the middle of the screen */
+    padding: 40px 20px;
 }
 
 .accordion-container {
     max-width: 600px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content inside the container */
 }
 
 .hero-text {
@@ -75,9 +79,13 @@ header h1, footer h2 {
     margin-bottom: 30px;
 }
 
+.accordion {
+    width: 100%; /* Ensures the boxes fill the max-width of the container */
+}
+
 /* HIGH TRANSPARENCY BOXES */
 details {
-    background: rgba(255, 255, 255, 0.1); /* Very see-through */
+    background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(4px);
     border: 2px solid #D32F2F;
     border-radius: 10px;
@@ -91,12 +99,15 @@ summary {
     font-size: 1.2rem;
     color: white;
     text-shadow: 1px 1px 2px black;
+    text-align: center; /* Centers the titles of the boxes */
+    list-style: none;
 }
 
 .box-content {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Opaque for readable text */
+    background: rgba(255, 255, 255, 0.9);
     color: black;
+    border-radius: 0 0 8px 8px;
 }
 
 .review {
@@ -123,7 +134,7 @@ summary {
     z-index: 1000;
 }
 
-/* Small adjustments for Mobile */
+/* Mobile Fixes */
 @media (max-width: 600px) {
     .brand-icon { height: 50px; }
     header h1 { font-size: 1.4rem; }
