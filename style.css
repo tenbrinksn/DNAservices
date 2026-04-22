@@ -5,19 +5,44 @@ body, html {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Red Bar Containers */
-header, footer {
+header {
     background-color: #D32F2F;
     color: white;
-    text-align: center;
     padding: 20px 0;
-    position: relative;
+    position: relative; /* Essential for positioning the button */
     z-index: 100;
 }
 
-/* FIXED LOGO SIZE */
+footer {
+    background-color: #D32F2F;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Header Button Styling */
+.header-call-btn {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%); /* Perfectly centers it vertically in the bar */
+    background-color: #25D366; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.header-call-btn:hover {
+    background-color: #1eb954;
+}
+
 .brand-icon {
-    height: 65px; /* Keeps the logo small on all screens */
+    height: 65px;
     width: auto;
     margin-bottom: 10px;
     display: block;
@@ -29,6 +54,7 @@ header h1, footer h2 {
     margin: 0;
     font-size: 1.8rem;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .sub-header {
@@ -36,9 +62,10 @@ header h1, footer h2 {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-/* Fixed Background */
+/* Background */
 .background-fixed {
     position: fixed;
     top: 0;
@@ -52,22 +79,19 @@ header h1, footer h2 {
     z-index: -1;
 }
 
-/* TOTAL CENTERING LOGIC */
+/* Content Centering */
 .page-layout {
     display: flex;
-    flex-direction: column; /* Stacks text and boxes */
-    justify-content: center; /* Centers vertically */
-    align-items: center;     /* Centers horizontally */
-    min-height: 70vh;        /* Ensures it takes up the middle of the screen */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
     padding: 40px 20px;
 }
 
 .accordion-container {
     max-width: 600px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the content inside the container */
 }
 
 .hero-text {
@@ -79,13 +103,9 @@ header h1, footer h2 {
     margin-bottom: 30px;
 }
 
-.accordion {
-    width: 100%; /* Ensures the boxes fill the max-width of the container */
-}
-
-/* HIGH TRANSPARENCY BOXES */
+/* Transparent Boxes */
 details {
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
     border: 2px solid #D32F2F;
     border-radius: 10px;
@@ -99,7 +119,7 @@ summary {
     font-size: 1.2rem;
     color: white;
     text-shadow: 1px 1px 2px black;
-    text-align: center; /* Centers the titles of the boxes */
+    text-align: center;
     list-style: none;
 }
 
@@ -115,28 +135,15 @@ summary {
     padding: 10px 0;
 }
 
-.review strong {
-    color: #D32F2F;
-}
+.review strong { color: #D32F2F; }
 
-/* Floating Call Button */
-.call-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
-    z-index: 1000;
-}
-
-/* Mobile Fixes */
-@media (max-width: 600px) {
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .header-call-btn {
+        position: static; /* Moves button below text on small phones */
+        display: inline-block;
+        margin-top: 15px;
+        transform: none;
+    }
     .brand-icon { height: 50px; }
-    header h1 { font-size: 1.4rem; }
-    .hero-text { font-size: 1.2rem; }
 }
