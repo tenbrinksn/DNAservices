@@ -6,13 +6,11 @@ body, html {
     color: black;
 }
 
-/* Header & Footer */
 header, footer {
     background-color: #CE2029;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
     z-index: 100;
 }
 
@@ -29,7 +27,6 @@ header h1, footer h2 {
     letter-spacing: 1px;
 }
 
-/* Background Courthouse */
 .background-fixed {
     position: fixed;
     top: 0;
@@ -39,34 +36,39 @@ header h1, footer h2 {
     background-image: url('courthouse.png');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7); /* No blur, just slightly darker for contrast */
+    filter: brightness(0.75); /* Darkened slightly so white text pops */
     z-index: -1;
 }
 
-/* SMALL TRANSPARENT LOGO - Top Left */
-.logo-wrapper {
-    position: absolute;
-    top: 80px; /* Right below the red header */
-    left: 20px;
-    z-index: 10;
+.main-layout {
+    display: flex;
+    min-height: 80vh;
 }
 
-.small-transparent-logo {
-    width: 120px; /* Small and tidy */
-    height: auto;
-    opacity: 0.3; /* Highly transparent */
-}
-
-/* CENTERING LOGIC */
-.page-center {
+.sidebar-left {
+    flex: 1;
     display: flex;
     justify-content: center;
-    padding: 60px 20px;
-    min-height: 65vh;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.centered-left-logo {
+    width: 240px; 
+    height: auto;
+    opacity: 0.3; /* Watermark effect */
+}
+
+.content-right {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 .main-column {
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
 }
 
@@ -75,42 +77,44 @@ header h1, footer h2 {
     color: white;
     font-size: 1.4rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+    margin-bottom: 25px;
 }
 
-/* ACCORDION - High Transparency */
+/* ULTRA-TRANSPARENT ACCORDION */
 details {
-    background: rgba(255, 255, 255, 0.3); /* Very see-through */
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.15); /* 15% opacity - very see-through */
+    backdrop-filter: blur(4px);
     border: 2px solid #CE2029;
     border-radius: 8px;
-    margin-bottom: 15px;
-    overflow: hidden;
+    margin-bottom: 12px;
 }
 
 summary {
     padding: 15px;
     font-weight: bold;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1); /* Even lighter header */
+    color: white; /* Changed to white so it stands out against the image */
+    text-shadow: 1px 1px 2px black;
 }
 
 .box-content {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.85); /* Slightly more solid so text is readable */
+    /* Content background remains slightly more solid (60%) for readability */
+    background: rgba(255, 255, 255, 0.6); 
+    border-top: 1px solid #CE2029;
 }
 
 .testimonial {
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .testimonial strong {
     color: #CE2029;
 }
 
-/* Call Button */
 .call-btn {
     position: fixed;
     bottom: 20px;
@@ -121,12 +125,12 @@ summary {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
     z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Mobile Fix */
-@media (max-width: 600px) {
-    .logo-wrapper { position: relative; top: 0; left: 0; text-align: center; }
-    .small-transparent-logo { opacity: 0.6; width: 100px; }
+@media (max-width: 800px) {
+    .main-layout { flex-direction: column; }
+    .sidebar-left { padding: 20px; }
+    .centered-left-logo { width: 150px; opacity: 0.5; }
 }
