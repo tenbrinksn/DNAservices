@@ -2,28 +2,34 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Centered Header/Footer */
+/* Header & Footer Styling */
 header, footer {
-    background-color: #CE2029; /* Fire Engine Red */
+    background-color: #CE2029;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     position: relative;
     z-index: 100;
 }
 
 header h1, footer h2 {
     margin: 0;
-    text-align: center; /* Ensures centering */
     letter-spacing: 3px;
-    font-weight: 800;
+    font-size: 2rem;
 }
 
-/* Background Layer with Courthouse */
+.sub-header, .sub-footer {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Background Courthouse */
 .background-fixed {
     position: fixed;
     top: 0;
@@ -33,118 +39,95 @@ header h1, footer h2 {
     background-image: url('courthouse.png');
     background-size: cover;
     background-position: center;
-    filter: blur(4px) brightness(0.9); /* Slightly out of focus */
+    filter: blur(3px) brightness(0.8);
     z-index: -1;
 }
 
-.split-screen {
-    display: flex;
-    min-height: calc(100vh - 160px);
+/* Logo Positioned Top-Left below Header */
+.logo-overlay {
+    position: absolute;
+    top: 85px; /* Adjust based on header height */
+    left: 20px;
+    z-index: 50;
 }
 
-/* Left Side - Large Badge */
-.left-side {
-    flex: 1;
+.corner-logo {
+    width: 150px;
+    height: auto;
+    opacity: 0.75; /* Transparent to see courthouse behind */
+}
+
+/* Centering the Accordion Content */
+.centered-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 70vh;
+    padding: 40px 20px;
 }
 
-.badge-logo {
-    width: 350px; /* Large Badge Size */
-    height: auto;
-    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.6));
-    transition: transform 0.3s ease;
-}
-
-.badge-logo:hover {
-    transform: scale(1.05); /* Subtle pop on hover */
-}
-
-/* Right Side - See-Through Content */
-.right-side {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.content-padding {
-    padding: 50px;
+.content-container {
+    max-width: 650px; /* Limits width to keep it centered and readable */
     width: 100%;
 }
 
 .intro-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: white; /* Contrast against blurred background */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Accordion Box - Glass Effect */
+/* More Transparent "Glass" Accordion */
 details {
-    /* Highly transparent white for that see-through look */
-    background: rgba(255, 255, 255, 0.75); 
-    backdrop-filter: blur(10px); 
-    border: 3px solid #CE2029;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.4); /* Lowered opacity for more transparency */
+    backdrop-filter: blur(8px);
+    border: 2px solid #CE2029;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    color: black;
 }
 
 summary {
-    padding: 20px;
+    padding: 18px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1.2rem;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-summary:hover {
-    background: rgba(206, 32, 41, 0.1);
-}
-
-summary::after {
-    content: '▼';
-    color: #CE2029;
+    font-size: 1.1rem;
 }
 
 .details-content {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Slightly more solid for text readability */
+    background: rgba(255, 255, 255, 0.7); /* Slightly more solid for text clarity */
 }
 
 .review {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 0;
 }
 
 .review strong {
     color: #CE2029;
 }
 
-/* Floating Call Now */
+/* Call Button */
 .floating-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25d366;
     color: white;
-    padding: 18px 30px;
+    padding: 15px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
     z-index: 1000;
 }
 
-/* Mobile Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .split-screen { flex-direction: column; }
-    .badge-logo { width: 250px; margin-top: 40px; }
-    .right-side { background: none; }
+    .logo-overlay { position: static; text-align: center; padding: 10px; }
+    .content-container { max-width: 100%; }
 }
