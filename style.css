@@ -5,40 +5,13 @@ body, html {
     font-family: 'Segoe UI', sans-serif;
 }
 
-header {
+header, footer {
     background-color: #D32F2F;
     color: white;
     padding: 25px 0;
+    text-align: center;
     position: relative;
     z-index: 100;
-}
-
-footer {
-    background-color: #D32F2F;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-}
-
-/* THE GREEN BUBBLE */
-.call-bubble {
-    position: absolute;
-    top: 20px; /* Aligned with the top right */
-    right: 30px;
-    background-color: #25D366; /* Vibrant Green */
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px; /* Makes it a "bubble" or pill shape */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
-}
-
-.call-bubble:hover {
-    transform: scale(1.05); /* Slight pop on hover */
-    background-color: #1eb954;
 }
 
 .brand-icon {
@@ -54,7 +27,6 @@ header h1, footer h2 {
     margin: 0;
     font-size: 1.8rem;
     letter-spacing: 2px;
-    text-align: center;
 }
 
 .sub-header {
@@ -62,7 +34,6 @@ header h1, footer h2 {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 /* Background */
@@ -79,14 +50,13 @@ header h1, footer h2 {
     z-index: -1;
 }
 
-/* Centering Logic */
+/* Page Centering */
 .page-layout {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .accordion-container {
@@ -103,7 +73,7 @@ header h1, footer h2 {
     margin-bottom: 30px;
 }
 
-/* Accordion Box Design */
+/* Accordion Boxes */
 details {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -130,18 +100,33 @@ summary {
     border-radius: 0 0 8px 8px;
 }
 
+/* BUTTON CENTERING & STYLE */
+.cta-container {
+    text-align: center; /* Centers the button inside the column */
+    margin-top: 25px;
+}
+
+.call-bubble {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.call-bubble:hover {
+    transform: scale(1.05);
+    background-color: #1eb954;
+}
+
 .review {
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding: 10px 0;
 }
 
 .review strong { color: #D32F2F; }
-
-/* Mobile View */
-@media (max-width: 768px) {
-    .call-bubble {
-        position: static;
-        display: inline-block;
-        margin-top: 15px;
-    }
-}
