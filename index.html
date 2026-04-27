@@ -3,79 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Services | Adel, IA</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DnA Services LLC | Electricity is in our DNA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .neon-text {
+            color: #39FF14;
+            text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #32cd32;
+        }
+
+        .neon-border {
+            border: 2px solid #39FF14;
+            box-shadow: 0 0 10px #39FF14;
+        }
+
+        .btn-neon {
+            background-color: #39FF14;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 20px #39FF14;
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <img src="DNAServices.png" alt="DNA Logo" class="brand-icon">
-            <h1>DNA SERVICES</h1>
-            <p class="sub-header">Electrical Solutions</p>
-            <p class="location-text">Adel, Iowa</p>
+    <header class="py-12 text-center bg-black">
+        <div class="inline-block p-4 rounded-full mb-4">
+            <i class="fa-solid fa-bolt-lightning text-6xl neon-text"></i>
         </div>
+        <h1 class="text-5xl font-black tracking-tighter neon-text uppercase">DnA Services LLC</h1>
+        <p class="text-sm tracking-[0.3em] font-bold mt-2 text-slate-400">ELECTRICITY IS IN OUR DNA</p>
     </header>
 
-    <div class="background-fixed"></div>
-
-    <main class="page-layout">
-        <div class="accordion-container">
-            <p class="hero-text">Powering Your Home with a Personal Touch.</p>
-
-            <div class="accordion">
-                <details name="info" open>
-                    <summary>Our Story</summary>
-                    <div class="box-content">
-                        <p>Founded by <strong>Diana and Adam</strong>, DNA Services brings family integrity to every project. Adam, raised in Adel, ensures your community stays safe and powered up.</p>
-                    </div>
-                </details>
-
-                <details name="info">
-                    <summary>Services</summary>
-                    <div class="box-content">
-                        <ul>
-                            <li>Residential & Commercial Troubleshooting</li>
-                            <li>New Construction & Renovations</li>
-                            <li>Safety Inspections & 24/7 Service Calls</li>
-                        </ul>
-                    </div>
-                </details>
-
-                <details name="info">
-                    <summary>Reviews & Testimonials</summary>
-                    <div class="box-content">
-                        <div class="review"><strong>★★★★★ - Sarah</strong><p>"I called Adam and he came right away! So professional and fixed my kitchen outlets."</p></div>
-                        <div class="review"><strong>★★★★★ - Mike</strong><p>"Highly responsive. Five stars for quality work on our new build."</p></div>
-                        <div class="review"><strong>★★★★★ - Brenda</strong><p>"Adam is the best. Very professional and handled our emergency perfectly."</p></div>
-                        <div class="review"><strong>★★★★★ - David</strong><p>"Treats you like a neighbor. Great shop panel upgrade."</p></div>
-                        <div class="review"><strong>★★★★★ - Jenna</strong><p>"The only electrician we'll use in Adel. Responsive and fair pricing."</p></div>
-                    </div>
-                </details>
-
-                <details name="info">
-                    <summary>Contact Info</summary>
-                    <div class="box-content">
-                        <p><strong>Call or Text:</strong> 1-515-208-2054</p>
-                        <p><strong>Email:</strong> tacelectric@gmail.com</p>
-                    </div>
-                </details>
+    <section class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Master Electrician. <br><span class="text-slate-400">Master of Everything Else.</span></h2>
+            <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                Whether you’re building your dream home from the ground up or need a reliable fix for a long-standing issue, Adam and the DnA team bring expert precision to every project in Western Des Moines.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="tel:5152082054" class="btn-neon px-8 py-4 rounded-sm font-black uppercase text-sm">Call Now</a>
+                <a href="mailto:tacelectric@gmail.com" class="border border-slate-500 px-8 py-4 rounded-sm font-black uppercase text-sm hover:bg-white hover:text-black transition">Email Us</a>
             </div>
+        </div>
+        <div class="md:w-1/2 glass-card p-8 rounded-lg neon-border">
+            <h3 class="text-2xl font-bold mb-4 neon-text">Quick Contact</h3>
+            <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-slate-400"></i> (515) 208-2054</p>
+            <p class="mb-2"><i class="fa-solid fa-envelope mr-2 text-slate-400"></i> tacelectric@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> Based in Adel, IA</p>
+        </div>
+    </section>
 
-            <div class="cta-container">
-                <a href="tel:15152082054" class="call-bubble">Call Now</a>
+    <section class="bg-slate-900 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black uppercase tracking-widest mb-12 border-b-2 border-slate-700 pb-4">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 glass-card rounded-md">
+                    <i class="fa-solid fa-plug text-3xl neon-text mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 uppercase">Electrical</h4>
+                    <p class="text-slate-400">Master Electrician services including wiring, panel upgrades, lighting, and troubleshooting.</p>
+                </div>
+                <div class="p-6 glass-card rounded-md">
+                    <i class="fa-solid fa-hammer text-3xl neon-text mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 uppercase">Construction</h4>
+                    <p class="text-slate-400">Full-scale building and home construction. We help you build from the foundation up.</p>
+                </div>
+                <div class="p-6 glass-card rounded-md">
+                    <i class="fa-solid fa-screwdriver-wrench text-3xl neon-text mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 uppercase">Renovations</h4>
+                    <p class="text-slate-400">Kitchens, bathrooms, and complete home overhauls. If it's broken, Adam can fix it.</p>
+                </div>
             </div>
-            
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <div class="footer-content">
-            <img src="DNAServices.png" alt="DNA Logo" class="brand-icon">
-            <h2>DNA SERVICES</h2>
-            <p class="sub-header">Electrical Solutions</p>
-            <p class="location-text">Adel, Iowa</p>
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-black mb-8 neon-text">Local. Family-Owned. Trusted.</h2>
+        <div class="text-lg text-slate-300 space-y-6 leading-relaxed">
+            <p>
+                DnA Services LLC was founded by <strong>Diana and Adam</strong> with a simple goal: to provide honest, high-quality craftsmanship to the people of <strong>Western Des Moines, Iowa</strong>.
+            </p>
+            <p>
+                Adam was raised right here in <strong>Adel, Iowa</strong>, and he and Diana continue to call it home today, raising their children in the same community they serve. When you hire us, you aren't just hiring a contractor—you're hiring a neighbor.
+            </p>
         </div>
+    </section>
+
+    <section class="bg-black py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-3xl font-black mb-12 uppercase tracking-widest">What Our Neighbors Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    "Adam is a rare find. He fixed our electrical issues and then helped us plan our deck. A truly honest man with a good heart."
+                    <p class="mt-4 font-bold text-white not-italic">— Sarah M., Adel</p>
+                </div>
+                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    "Professional work at a very fair price. You can tell Adam takes pride in what he does. Highly recommend for any home project."
+                    <p class="mt-4 font-bold text-white not-italic">— Mike T., Waukee</p>
+                </div>
+                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    "Hard to find someone you trust these days, but Adam and Diana are the real deal. Excellent communication and master-level skills."
+                    <p class="mt-4 font-bold text-white not-italic">— James R., West Des Moines</p>
+                </div>
+                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    "He renovated our entire kitchen. From the wiring to the cabinets, everything was perfect. Adam can literally fix or build anything."
+                    <p class="mt-4 font-bold text-white not-italic">— Linda K., Adel</p>
+                </div>
+                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    "Great work, great price, and just a good person to have working on your home. DnA Services is our go-to from now on."
+                    <p class="mt-4 font-bold text-white not-italic">— Robert P., Clive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-slate-800">
+        <h2 class="text-2xl font-black mb-6">READY TO START YOUR PROJECT?</h2>
+        <div class="flex justify-center gap-6">
+            <a href="tel:5152082054" class="text-3xl neon-text hover:scale-110 transition"><i class="fa-solid fa-phone"></i></a>
+            <a href="mailto:tacelectric@gmail.com" class="text-3xl neon-text hover:scale-110 transition"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="mt-8 text-slate-500 text-sm">&copy; 2026 DnA Services LLC | Adel, Iowa</p>
     </footer>
 
 </body>
