@@ -3,149 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DnA Services LLC | Electricity is in our DnA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>DNA Services Iowa | BIO-LOGICAL CHAOS</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
+        :root {
+            --glow-green: #39ff14;
+            --dark-void: #0a0f0d;
+            --bio-hazard: #ff5500;
+            --corny-yellow: #ffd700;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+            background-color: var(--dark-void);
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: radial-gradient(rgba(57, 255, 20, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
         }
 
-        .neon-text {
-            color: #39FF14;
-            text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #32cd32;
+        /* Glitch & Mad Scientist Header */
+        header {
+            text-align: center;
+            border-bottom: 3px double var(--glow-green);
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.85);
+            position: relative;
         }
 
-        .neon-border {
-            border: 2px solid #39FF14;
-            box-shadow: 0 0 10px #39FF14;
+        .warning-banner {
+            background: var(--bio-hazard);
+            color: black;
+            font-weight: bold;
+            padding: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: blink 1s infinite;
         }
 
-        .btn-neon {
-            background-color: #39FF14;
-            color: #000;
-            transition: all 0.3s ease;
+        h1 {
+            color: var(--glow-green);
+            font-size: 3rem;
+            text-shadow: 0 0 10px var(--glow-green);
+            margin: 0.5rem 0;
+            letter-spacing: -1px;
         }
 
-        .btn-neon:hover {
-            box-shadow: 0 0 20px #39FF14;
-            transform: translateY(-2px);
+        .subtitle {
+            color: var(--corny-yellow);
+            font-style: italic;
+            font-weight: bold;
         }
 
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Main Lab Section */
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .lab-terminal {
+            background: #111;
+            border: 2px solid var(--glow-green);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--bio-hazard);
+            border-bottom: 1px solid var(--bio-hazard);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Interactive Chaos Machine */
+        .generator-box {
+            text-align: center;
+            background: #1a1a1a;
+            border: 2px dashed var(--corny-yellow);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .slogan-display {
+            font-size: 1.5rem;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            border: 1px solid #333;
+            background: black;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        button {
+            background: var(--glow-green);
+            color: black;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px var(--glow-green);
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: white;
+            box-shadow: 0 0 25px white;
+            transform: scale(1.05);
+        }
+
+        /* Grid Manifesto */
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .grid-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid #333;
+            padding: 1rem;
+        }
+
+        .grid-card:hover {
+            border-color: var(--glow-green);
+        }
+
+        /* Contact Details */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: var(--glow-green);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes blink {
+            0%, 49% { background: var(--bio-hazard); color: black; }
+            50%, 100% { background: black; color: var(--bio-hazard); }
         }
     </style>
 </head>
 <body>
 
-    <header class="py-12 text-center bg-black">
-        <div class="max-w-md mx-auto px-4">
-            <img src="dna.png" alt="DnA Services LLC" class="w-full max-w-[400px] mx-auto block">
-        </div>
+    <div class="warning-banner">⚠️ CAUTION: Containment Protocol 14-B Is Currently Active Across All Des Moines Test Fields ⚠️</div>
+
+    <header>
+        <h1>DNA SERVICES IOWA</h1>
+        <p class="subtitle">"Splicing the Heartland Until the Corn Stares Back"</p>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2">
-            <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Master Electrician. <br><span class="text-slate-400">Master of Everything Else.</span></h2>
-            <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-                Whether you’re building your dream home from the ground up or need a reliable fix for a long-standing issue, Adam and the <span class="font-bold neon-text">DnA</span> team bring expert precision to every project in Western Des Moines.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="tel:5152082054" class="btn-neon px-8 py-4 rounded-sm font-black uppercase text-sm">Call Now</a>
-                <a href="mailto:dnaservicesiowa@gmail.com" class="border border-slate-500 px-8 py-4 rounded-sm font-black uppercase text-sm hover:bg-white hover:text-black transition">Email Us</a>
+    <main>
+        <div class="lab-terminal">
+            <h2>LOG_042: THE DES MOINES INCIDENT</h2>
+            <p>Welcome to Iowa's premiere underground genetic reconfiguration chamber. Standard physics and agriculture board regulations do not apply here. We looked at a standard ear of corn and said, <em>"But what if it could sprint?"</em></p>
+            <p><strong>Current Status:</strong> Unsupervised. Highly Volatile.</p>
+        </div>
+
+        <div class="generator-box">
+            <h2 style="color: var(--corny-yellow); border: none;">🧬 THE SLOGAN ABOMINATION GENERATOR 🧬</h2>
+            <p>Cycle through our core corporate operating directives:</p>
+            <div class="slogan-display" id="slogan-target">Click the button below to destabilize reality.</div>
+            <button onclick="mutateSlogan()">MUTATE SLOGAN</button>
+        </div>
+
+        <div class="manifesto-grid">
+            <div class="grid-card">
+                <h3>🌽 Current Projects</h3>
+                <ul>
+                    <li>Hyper-intelligent super-pigs</li>
+                    <li>Saddle-compatible combines</li>
+                    <li>The 40-ton State Fair Beast</li>
+                </ul>
+            </div>
+            <div class="grid-card">
+                <h3>🧫 Security Status</h3>
+                <p>The standard liability waivers have been automated. If a multi-legged stalk of corn judges you in your sleep, you legally waived the right to complain to the county clerk.</p>
             </div>
         </div>
-        <div class="md:w-1/2 glass-card p-8 rounded-lg neon-border">
-            <h3 class="text-2xl font-bold mb-4 neon-text">Quick Contact</h3>
-            <p class="mb-2"><i class="fa-solid fa-phone mr-2 text-slate-400"></i> (515) 208-2054</p>
-            <p class="mb-2"><i class="fa-solid fa-envelope mr-2 text-slate-400"></i> dnaservicesiowa@gmail.com</p>
-            <p><i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> Based in Adel, IA</p>
-        </div>
-    </section>
+    </main>
 
-    <section class="bg-slate-900 py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-black uppercase tracking-widest mb-12 border-b-2 border-slate-700 pb-4">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 glass-card rounded-md">
-                    <i class="fa-solid fa-plug text-3xl neon-text mb-4"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Electrical</h4>
-                    <p class="text-slate-400">Master Electrician services including wiring, panel upgrades, lighting, and troubleshooting.</p>
-                </div>
-                <div class="p-6 glass-card rounded-md">
-                    <i class="fa-solid fa-hammer text-3xl neon-text mb-4"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Construction</h4>
-                    <p class="text-slate-400">Full-scale building and home construction. We help you build from the foundation up.</p>
-                </div>
-                <div class="p-6 glass-card rounded-md">
-                    <i class="fa-solid fa-screwdriver-wrench text-3xl neon-text mb-4"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Renovations</h4>
-                    <p class="text-slate-400">Kitchens, bathrooms, and complete home overhauls. If it's broken, Adam can fix it.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-3xl font-black mb-8 neon-text">Local. Family-Owned. Trusted.</h2>
-        <div class="text-lg text-slate-300 space-y-6 leading-relaxed">
-            <p>
-                <strong>DnA Services LLC</strong> was founded by Diana and Adam with a simple goal: to provide honest, high-quality craftsmanship to the people of <strong>Western Des Moines, Iowa</strong>.
-            </p>
-            <p>
-                Adam was raised right here in <strong>Adel, Iowa</strong>, and he and Diana continue to call it home today, raising their children in the same community they serve. When you hire us, you aren't just hiring a contractor—you're hiring a neighbor.
-            </p>
-        </div>
-    </section>
-
-    <section class="bg-black py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-center text-3xl font-black mb-12 uppercase tracking-widest text-slate-500">What Our Neighbors Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
-                    <div class="text-yellow-400 mb-2">★★★★★</div>
-                    "Adam is a rare find. He fixed our electrical issues and then helped us plan our deck. A truly honest man with a good heart."
-                    <p class="mt-4 font-bold text-white not-italic">— Sarah M., Adel</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
-                    <div class="text-yellow-400 mb-2">★★★★★</div>
-                    "Professional work at a very fair price. You can tell Adam takes pride in what he does. Highly recommend for any home project."
-                    <p class="mt-4 font-bold text-white not-italic">— Mike T., Waukee</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
-                    <div class="text-yellow-400 mb-2">★★★★★</div>
-                    "Hard to find someone you trust these days, but Adam and Diana are the real deal. Excellent communication and master-level skills."
-                    <p class="mt-4 font-bold text-white not-italic">— James R., West Des Moines</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
-                    <div class="text-yellow-400 mb-2">★★★★★</div>
-                    "He renovated our entire kitchen. From the wiring to the cabinets, everything was perfect. Adam can literally fix or build anything."
-                    <p class="mt-4 font-bold text-white not-italic">— Linda K., Adel</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded-lg italic text-slate-400">
-                    <div class="text-yellow-400 mb-2">★★★★★</div>
-                    "Great work, great price, and just a good person to have working on your home. <span class="font-bold neon-text">DnA</span> Services is our go-to from now on."
-                    <p class="mt-4 font-bold text-white not-italic">— Robert P., Clive</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 text-center border-t border-slate-800">
-        <h2 class="text-2xl font-black mb-6">READY TO START YOUR PROJECT?</h2>
-        <div class="flex justify-center gap-6">
-            <a href="tel:5152082054" class="text-3xl neon-text hover:scale-110 transition"><i class="fa-solid fa-phone"></i></a>
-            <a href="mailto:dnaservicesiowa@gmail.com" class="text-3xl neon-text hover:scale-110 transition"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <p class="mt-8 text-slate-500 text-sm">&copy; 2026 DnA Services LLC | Adel, Iowa</p>
+    <footer>
+        <p>DNA Services Iowa // Est. Last Tuesday // Powered by Mad Science & Pure Corn Power</p>
+        <p>Quick Contacts: <a href="mailto:dnaservicesiowa@gmail.com">dnaservicesiowa@gmail.com</a></p>
     </footer>
 
+    <script>
+        const slogans = [
+            "Because your corn shouldn’t just stand there—it should look you in the eye and judge you.",
+            "Turning ordinary Des Moines fields into Jurassic Park, one glowing stalk at a time.",
+            "We put the 'gene' in genetically engineered, hyper-intelligent super-pigs.",
+            "Cross-breeding hogs and standard combines since last Tuesday. Grab a helmet.",
+            "Making your livestock talk, because farming alone gets lonely.",
+            "Splice the corn, dice the rules—let’s give a cow wings and see what happens to the barns.",
+            "If you build it... we will clone it. Multiple times.",
+            "Putting the DNA in 'Why on earth did we cross a prize-winning heifer with a lawnmower?'",
+            "From the laboratory straight to the State Fair—come see our newest 40-ton, multi-legged corn beast!"
+        ];
+
+        function mutateSlogan() {
+            const target = document.getElementById('slogan-target');
+            
+            // Add a brief glitch text effect
+            target.style.color = '#ff5500';
+            target.innerText = "MUTATING GENETIC CODE...";
+            
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * slogans.length);
+                target.innerText = `"${slogans[randomIndex]}"`;
+                target.style.color = '#39ff14';
+            }, 300);
+        }
+
+        // Initialize with a random one
+        mutateSlogan();
+    </script>
 </body>
 </html>
